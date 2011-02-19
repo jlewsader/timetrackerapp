@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns=" http://www.w3.org/ns/widgets"
+        xmlns:rim="http://www.blackberry.com/ns/widgets"
+        version="2.0">
+
+  <name>PTT RC 1</name>
+  
+  <version>RC 1</version>
+
+  <description>
+Project time recording app used to record hours worked on a project. Built using HTML5 with CSS3 Styling and Javascript localStorage
+  </description>
+  
+  <author href="http://www.jlewsader.com" copyright="2011">Justin Lewsader</author>
+
+  <icon src="images/icon.png"/>
+
+  <content src="index.html"/>
+
+  <feature id="blackberry.ui.dialog" required="true" version="1.0.0"/>
+<access uri ="*"/>
+<access uri ="http://www.keller-pc.com"/>
+<access uri ="http://www.twitter.com"/>
+
+</widget>

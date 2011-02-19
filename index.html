@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="http://www.jlewsader.com">
+<meta name="copyright" content="2011 - J Lewsader">
+<meta name="description" content="Project time recording app used to record hours worked on a project. Built using HTML5 with CSS3 Styling and Javascript backend">
+<title>Project Time Tracker</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link type="text/css" href="jquery.mobile-1.0a3.css" rel="stylesheet" />
+<link type="text/css" href="jquery-ui-1.8.9.custom.css" rel="stylesheet" />
+</head>
+<body>
+<div data-role="page" data-theme="a" id="main"><!-- Start Page Div-->
+<div data-role="header"><!-- Start Header Div -->
+<a href="#about" data-role="button" data-transition="fade">About</a>
+<header>
+  <h1 id="edit" contenteditable="true">Tap to Edit Project Name</h1>
+</header>
+</div><!-- End Header Div-->
+<div data-role="content"><!-- Start Content Div -->
+<form id="times-form">
+  <div class="item text">
+    <label>Date:</label>
+    <div class="field">
+      <input type="text" id="date" name="date" placeholder="MM/DD/YY" />
+    </div>
+  </div>
+  <div class="item text">
+    <label>Hours:</label>
+    <div class="field">
+      <input type="number" name="hours" value="0" placeholder="Hours (Only in 1 Hr Incr.)" />
+    </div>
+  </div>
+  <div class="item text">
+    <label>Task:</label>
+    <div class="field">
+      <input type="text" name="task" placeholder="Enter Task Done"/>
+    </div>
+  </div>
+  <div class="button-wrapper">
+    <div class="item button">
+      <div class="field">
+        <input type="button" id="times-op-clear" value="Clear" onClick="clearstorage()" />
+      </div>
+    </div>
+    <div class="item button">
+      <div class="field">
+        <input type="button" id="times-op-discard" value="Discard" />
+      </div>
+    </div>
+    <div class="item button button-default">
+      <div class="field">
+        <input type="submit" id="times-op-save" value="Save" data-theme="b"/>
+      </div>
+    </div>
+  </div>
+  <input type="hidden" name="id_entry" value="0" />
+</form>
+<table id="times-table" align="center">
+  <tr id="times-head">
+    <th height="34">Date</th>
+    <th>Hours</th>
+    <th>Task</th>
+    <th>Actions</th>
+  </tr>
+</table>
+<p class="total">Total: <span id="total">0</span> hours</p>
+
+</div><!-- /Content Div-->
+</div><!-- /Page Div-->
+
+<!-- About Page -->
+
+<div data-role="page" data-theme="a" id="about">
+
+	<div data-role="header">
+    	<a href="#" data-role="button" data-rel="back">Back</a>
+        <header>
+			<h1>About</h1>
+        </header>
+	</div><!-- /header -->
+
+	<div class="content" data-role="content">
+		<h3>Project Time Tracker</h3>
+         <p>Version 1<br />
+          Developed for BlackBerry WebWorks <br />
+          on PlayBook by <a href="http://www.jlewsader.com" title="J. Lewsader" target="_blank">J. Lewsader</a></p>
+        <p><em>Easily log time spent on a project using a clean interface.</em></p>
+        <p> <a href="http://twitter.com/jlewsader" title="@jlewsader" target="_blank">@jlewsader on Twitter</a> </p>
+        <p> <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-storage.png" border="0" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Offline &amp; Storage" title="HTML5 Powered with CSS3 / Styling, and Offline &amp; Storage"> </p>
+			<footer>&copy; 2011 J Lewsader</footer>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+<!-- End About Page -->
+
+<script type="text/javascript" src="scripts/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui-1.8.9.custom.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.mobile-1.0a3.js"></script>
+<script type="text/javascript" src="scripts/script.js"></script>  
+<script type="text/javascript" src="scripts/header.js"></script>
+<script> $(function() { $( "#date" ).datepicker({ showAnim: 'fold'}); }); </script>
+
+</body>
+</html>
