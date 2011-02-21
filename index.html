@@ -7,16 +7,15 @@
 <meta name="description" content="Project time recording app used to record hours worked on a project. Built using HTML5 with CSS3 Styling and Javascript backend">
 <title>Project Time Tracker</title>
 <link href="styles.css" rel="stylesheet" type="text/css">
-<link type="text/css" href="jquery.mobile-1.0a3.css" rel="stylesheet" />
-<link type="text/css" href="jquery-ui-1.8.9.custom.css" rel="stylesheet" />
 </head>
 <body>
 <div data-role="page" data-theme="a" id="main"><!-- Start Page Div-->
-<div data-role="header"><!-- Start Header Div -->
-<a href="#about" data-role="button" data-transition="fade">About</a>
-<header>
+<div data-role="header" data-position="inline" data-backbtn="false"><!-- Start Header Div -->
+	<a href="#about" data-role="button" data-transition="fade">About</a>
+  <header>
   <h1 id="edit" contenteditable="true">Tap to Edit Project Name</h1>
-</header>
+  </header>
+  	<a onClick="exitApp()" data-role="button" data-theme="f" style="color:#AAA">Close</a>
 </div><!-- End Header Div-->
 <div data-role="content"><!-- Start Content Div -->
 <form id="times-form">
@@ -41,7 +40,7 @@
   <div class="button-wrapper">
     <div class="item button">
       <div class="field">
-        <input type="button" id="times-op-clear" value="Clear" onClick="clearstorage()" />
+        <input type="button" id="times-op-clear" value="Clear" onClick="clearDialog()" />
       </div>
     </div>
     <div class="item button">
@@ -82,13 +81,15 @@
 	</div><!-- /header -->
 
 	<div class="content" data-role="content">
-		<h3>Project Time Tracker</h3>
-         <p>Version 1<br />
-          Developed for BlackBerry WebWorks <br />
-          on PlayBook by <a href="http://www.jlewsader.com" title="J. Lewsader" target="_blank">J. Lewsader</a></p>
+			<h3>Project Time Tracker</h3>
+         <p>Version 1.2.0</p>
         <p><em>Easily log time spent on a project using a clean interface.</em></p>
-        <p> <a href="http://twitter.com/jlewsader" title="@jlewsader" target="_blank">@jlewsader on Twitter</a> </p>
-        <p> <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-storage.png" border="0" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Offline &amp; Storage" title="HTML5 Powered with CSS3 / Styling, and Offline &amp; Storage"> </p>
+          <p>Developed using BlackBerry WebWorks SDK with HTML5, CSS3, and Javascript<br />
+          This version optimized for PlayBook <br />
+          Built by <a onClick="openWeb()">J. Lewsader</a></p>
+        <p> <a onClick="openTwitter()">@jlewsader on Twitter</a> </p>
+        <p> <img src="images/html5-badge-h-css3-storage.png" border="0" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Offline &amp; Storage" title="HTML5 Powered with CSS3 / Styling, and Offline &amp; Storage"> </p>
+        <p> <a onClick="updateApp" data-role="button">Check For Update</a> </p>
 			<footer>&copy; 2011 J Lewsader</footer>
 	</div><!-- /content -->
 
@@ -97,10 +98,7 @@
 <!-- End About Page -->
 
 <script type="text/javascript" src="scripts/jquery-1.4.4.min.js"></script>
-<script type="text/javascript" src="scripts/jquery-ui-1.8.9.custom.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.mobile-1.0a3.js"></script>
 <script type="text/javascript" src="scripts/script.js"></script>  
-<script type="text/javascript" src="scripts/header.js"></script>
 <script> $(function() { $( "#date" ).datepicker({ showAnim: 'fold'}); }); </script>
 
 </body>
