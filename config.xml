@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget xmlns=" http://www.w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets" version="1.2">
+<widget xmlns=" http://www.w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets" version="1.2.0">
 
   <name>Project Time Tracker</name>
   
-  <version>1.2.0</version>
+  <version>1.2.1</version>
 
   <description>
 Project time recording app used to record hours worked on a project. Built using HTML5 with CSS3 Styling and Javascript
   </description>
+  
+  <rim:loadingScreen backgroundImage="bgLoading.png" foregroundImage="fgLoading.gif" onFirstLaunch="true" onLocalPageLoad="true" onRemotePageLoad="true">
+	<rim:transitionEffect type="zoomIn" />
+  </rim:loadingScreen>
   
   <author rim:copyright="2011" email="jlewsader@gmail.com" href="http://www.jlewsader.com" >Justin Lewsader</author>
 
