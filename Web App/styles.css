@@ -1,0 +1,152 @@
+
+/* Project Time Tracker */
+/* Author - J Lewsader */
+/* Copyright 2011 */
+/* http://www.jlewsader.com */
+
+#main, #about {
+	height:100%;
+}
+
+body {
+	font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	background: #000;
+}
+
+#main a, #about a, #times-table a {
+	text-decoration:none;
+	color:#BBB;
+	cursor:pointer;
+}
+
+h1 {
+	text-align:center;
+	font-size:3em;
+	color: #FFF;
+}
+
+h2 {
+	text-align:center;
+	font-size:2em;
+	color: #FFF;
+}
+
+h3 {
+	font-size:1.5em;
+}
+
+p.total {
+	font-size: 1.25em;
+	font-weight:bold;
+	text-align:center;
+	color: #FFF;
+}
+
+footer {
+	font-size:.75em;
+	color:#666;
+	text-align:center;
+}
+
+#wrap {
+	width:475px;
+	height:100%;
+	margin:auto;
+}
+
+#times-table {
+	border-collapse: collapse;
+}
+
+#times-table, #times-table th, #times-table td {
+	padding: 8px 16px;
+	text-align: left;
+	border: 0px solid #B9BABE;
+}
+
+#times-table th {
+	font-weight: bold;
+	font-size: 14px;
+	color: #FFF;
+	text-align:center;
+}
+
+#times-table td {
+	color: #fff;
+	font-weight:bold;
+}
+
+#times-table tr {
+	border-bottom: 1px solid #6E6E6E;
+}
+
+#times-table tr td:first-child {
+	display: none;
+}
+
+#times-form {
+	padding: 10px;
+	text-align:center;
+}
+
+.text input, .button input {
+	padding: 5px;
+	margin: 0;
+	border: 1px solid #ccc;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#times-form .item {
+	margin: 3px 0;
+}
+
+#times-form label, #times-form .field {
+	display: inline-block;
+	color: #0C0B07;
+}
+
+#times-form label {
+	width: 110px;
+	font-weight: bold;
+	text-align: right;
+	color: #BBB;
+}
+
+#times-form .text input {
+	width: 176px;
+	padding: 3px;
+}
+
+#times-form .button {
+	display: inline-block;
+}
+
+#times-form .button-wrapper {
+	padding-left: 113px;
+}
+
+.button input {
+	padding: 4px 8px;
+	color: #343434;
+	background-color: #fdfdfd;
+	background: -moz-linear-gradient(#fdfdfd, #e1e1e1);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#fdfdfd), to(#e1e1e1));
+	border-color: #FFF;
+}
+
+.button-default input {
+	font-weight: bold;
+	color: #343434;
+	background-color: #fdfdfd;
+	background: -moz-linear-gradient(#fdfdfd, #e1e1e1);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#fdfdfd), to(#e1e1e1));
+	border-color: #FFF;
+}
+
+.content {
+	width:50%;
+	margin:15px auto;
+	text-align:center;
+}
